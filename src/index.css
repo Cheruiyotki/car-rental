@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #0066cc;
+  --secondary: #333333;
+  --accent: #ff6600;
+  --light: #f8f9fa;
+  --dark: #1283f4;
+  --header-bg: rgb(23, 20, 43);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+a {
+  color: inherit;
+}
