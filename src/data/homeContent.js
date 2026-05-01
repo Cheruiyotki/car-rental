@@ -1,4 +1,5 @@
 import { routes } from "../utils/routes";
+import heroBackgroundImage from "../assets/luxury-car-hero.jpg";
 
 export const navigationLinks = [
   { label: "Home", path: routes.home },
@@ -110,5 +111,4 @@ export const customerServiceLinks = [
   { label: "Terms of Service", path: routes.termsOfService },
 ];
 
-export const heroBackground =
-  "https://placehold.co/1200x600/333333/FFFFFF/png?text=Luxury+Cars";
+export const heroBackground = heroBackgroundImage;

@@ -9,7 +9,7 @@ export default function PageHero({
 }) {
   return (
     <section
-      className="bg-cover bg-center py-[70px] text-center text-white md:py-[100px]"
+      className="bg-cover bg-center pb-[80px] pt-[170px] text-center text-white md:pb-[120px] md:pt-[210px]"
       data-gsap-hero
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('${backgroundImage}')`,

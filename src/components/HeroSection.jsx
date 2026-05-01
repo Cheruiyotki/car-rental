@@ -5,10 +5,10 @@ import { heroBackground, searchFilters } from "../data/homeContent";
 export default function HeroSection() {
   return (
     <section
-      className="bg-cover bg-center py-[60px] text-center text-white md:py-[100px]"
+      className="bg-cover bg-center pt-[170px] text-center text-white pb-[80px] md:pb-[120px] md:pt-[210px]"
       data-gsap-hero
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${heroBackground}')`,
+        backgroundImage: `linear-gradient(rgba(7,12,23,0.6), rgba(7,12,23,0.6)), url('${heroBackground}')`,
       }}
     >
       <Container>

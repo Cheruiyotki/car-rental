@@ -13,8 +13,8 @@ function getNavLinkClass(isActive) {
 
 export default function Header({ currentPath }) {
   return (
-    <header className="sticky top-0 z-[100] m-[3px] rounded-[10px] bg-header shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
-      <Container className="flex flex-col items-center justify-between py-[15px] md:flex-row">
+    <header className="fixed inset-x-0 top-0 z-[100] px-[3px] pt-[3px]">
+      <Container className="flex flex-col items-center justify-between rounded-[10px] border border-[rgba(255,255,255,0.08)] bg-[rgba(23,20,43,0.72)] py-[15px] shadow-[0_2px_10px_rgba(0,0,0,0.18)] backdrop-blur-[10px] md:flex-row">
         <RouteLink
           to={routes.home}
           className="text-[24px] font-bold text-primary no-underline"
