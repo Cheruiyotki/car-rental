@@ -44,17 +44,17 @@ export default function AboutPage() {
       <section className="py-[60px]">
         <Container>
           <div className="grid gap-[30px] md:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[8px] bg-light p-[30px]">
+            <div className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]">
               <h2 className="mb-[15px] text-[2rem] text-secondary">
                 Built Around Trust
               </h2>
-              <p className="mb-[16px] text-[#555]">
+              <p className="mb-[16px]">
                 We started AutoElite with one goal: create a dealership
                 experience that feels modern, honest, and convenient. That
                 means better vehicle selection, flexible financing, and support
                 that feels personal from start to finish.
               </p>
-              <p className="text-[#555]">
+              <p>
                 Whether you are upgrading your daily driver, buying your first
                 SUV, or selling your current vehicle, we aim to make each step
                 straightforward and comfortable.

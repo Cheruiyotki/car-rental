@@ -44,40 +44,40 @@ export default function ContactPage() {
 
           <div className="grid gap-[30px] md:grid-cols-[1.1fr_0.9fr]">
             <form
-              className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
+              className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]"
               onSubmit={(event) => event.preventDefault()}
             >
-              <h3 className="mb-[20px] text-[1.5rem] text-secondary">
+              <h3 className="mb-[20px] text-[1.5rem]">
                 Send Us a Message
               </h3>
               <div className="mb-[15px] grid gap-[15px] md:grid-cols-2">
                 <input
                   type="text"
                   placeholder="First Name"
-                  className="rounded-[4px] border border-[#ddd] p-[12px]"
+                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
                 />
                 <input
                   type="text"
                   placeholder="Last Name"
-                  className="rounded-[4px] border border-[#ddd] p-[12px]"
+                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
                 />
               </div>
               <div className="mb-[15px] grid gap-[15px] md:grid-cols-2">
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="rounded-[4px] border border-[#ddd] p-[12px]"
+                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
                 />
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="rounded-[4px] border border-[#ddd] p-[12px]"
+                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
                 />
               </div>
               <textarea
                 rows="6"
                 placeholder="How can we help you?"
-                className="mb-[20px] w-full rounded-[4px] border border-[#ddd] p-[12px]"
+                className="mb-[20px] w-full rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
               />
               <Button variant="accent" type="submit">
                 Submit Inquiry
