@@ -12,6 +12,11 @@ import SellYourCarPage from "./pages/SellYourCarPage";
 import FinancingPage from "./pages/FinancingPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import FaqPage from "./pages/FaqPage";
+import WarrantyPage from "./pages/WarrantyPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsPage from "./pages/TermsPage";
+import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 const routeComponents = {
@@ -21,6 +26,11 @@ const routeComponents = {
   [routes.financing]: FinancingPage,
   [routes.aboutUs]: AboutPage,
   [routes.contact]: ContactPage,
+  [routes.faq]: FaqPage,
+  [routes.warranty]: WarrantyPage,
+  [routes.privacyPolicy]: PrivacyPolicyPage,
+  [routes.termsOfService]: TermsPage,
+  [routes.login]: LoginPage,
 };
 
 export default function App() {
@@ -49,7 +59,7 @@ export default function App() {
   const ActivePage = routeComponents[path] || NotFoundPage;
 
   return (
-    <Layout>
+    <Layout currentPath={path}>
       <div ref={pageRef}>
         <ActivePage />
       </div>

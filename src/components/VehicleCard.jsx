@@ -7,9 +7,10 @@ export default function VehicleCard({ vehicle }) {
       className="overflow-hidden rounded-[8px] bg-white shadow-[0_4px_12px_rgba(0,0,0,0.1)] transition-transform duration-300 hover:-translate-y-[5px]"
       data-gsap-card
     >
-      <div
-        className="h-[200px] bg-[#ddd] bg-cover bg-center"
-        style={{ backgroundImage: `url('${vehicle.image}')` }}
+      <img
+        src={vehicle.image}
+        alt={vehicle.name}
+        className="h-[200px] w-full bg-[#ddd] object-cover"
       />
 
       <div className="p-[20px]">

@@ -5,6 +5,11 @@ export const routes = {
   financing: "/financing",
   aboutUs: "/about-us",
   contact: "/contact",
+  faq: "/faq",
+  warranty: "/warranty",
+  privacyPolicy: "/privacy-policy",
+  termsOfService: "/terms-of-service",
+  login: "/login",
 };
 
 export const routeTitles = {
@@ -14,6 +19,11 @@ export const routeTitles = {
   [routes.financing]: "AutoElite - Financing",
   [routes.aboutUs]: "AutoElite - About Us",
   [routes.contact]: "AutoElite - Contact",
+  [routes.faq]: "AutoElite - FAQ",
+  [routes.warranty]: "AutoElite - Warranty",
+  [routes.privacyPolicy]: "AutoElite - Privacy Policy",
+  [routes.termsOfService]: "AutoElite - Terms of Service",
+  [routes.login]: "AutoElite - Login",
 };
 
 export function normalizePath(path = "") {

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Container from "../components/Container";
 import PageCard from "../components/PageCard";
 import PageHero from "../components/PageHero";
@@ -20,6 +21,41 @@ const contactDetails = [
 ];
 
 export default function ContactPage() {
+  const [formValues, setFormValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setFormValues((currentValues) => ({
+      ...currentValues,
+      [name]: value,
+    }));
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const subject = `AutoElite Inquiry from ${formValues.firstName} ${formValues.lastName}`.trim();
+    const body = [
+      `First Name: ${formValues.firstName}`,
+      `Last Name: ${formValues.lastName}`,
+      `Email: ${formValues.email}`,
+      `Phone: ${formValues.phone}`,
+      "",
+      "Message:",
+      formValues.message,
+    ].join("\n");
+
+    window.location.href = `mailto:info@autoelite.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  }
+
   return (
     <>
       <PageHero
@@ -49,44 +85,92 @@ export default function ContactPage() {
           <div className="grid gap-[30px] md:grid-cols-[1.1fr_0.9fr]">
             <form
               className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]"
-              onSubmit={(event) => event.preventDefault()}
+              onSubmit={handleSubmit}
               data-gsap-section-item
             >
               <h3 className="mb-[20px] text-[1.5rem]">
                 Send Us a Message
               </h3>
               <div className="mb-[15px] grid gap-[15px] md:grid-cols-2">
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
-                />
-                <input
-                  type="text"
-                  placeholder="Last Name"
-                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
-                />
+                <label className="block text-secondary">
+                  <span className="mb-[6px] block text-[0.95rem] font-semibold">
+                    First Name
+                  </span>
+                  <input
+                    type="text"
+                    name="firstName"
+                    autoComplete="given-name"
+                    required
+                    value={formValues.firstName}
+                    onChange={handleChange}
+                    className="w-full rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
+                  />
+                </label>
+                <label className="block text-secondary">
+                  <span className="mb-[6px] block text-[0.95rem] font-semibold">
+                    Last Name
+                  </span>
+                  <input
+                    type="text"
+                    name="lastName"
+                    autoComplete="family-name"
+                    required
+                    value={formValues.lastName}
+                    onChange={handleChange}
+                    className="w-full rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
+                  />
+                </label>
               </div>
               <div className="mb-[15px] grid gap-[15px] md:grid-cols-2">
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
-                />
+                <label className="block text-secondary">
+                  <span className="mb-[6px] block text-[0.95rem] font-semibold">
+                    Email Address
+                  </span>
+                  <input
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    required
+                    value={formValues.email}
+                    onChange={handleChange}
+                    className="w-full rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
+                  />
+                </label>
+                <label className="block text-secondary">
+                  <span className="mb-[6px] block text-[0.95rem] font-semibold">
+                    Phone Number
+                  </span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    autoComplete="tel"
+                    required
+                    value={formValues.phone}
+                    onChange={handleChange}
+                    className="w-full rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
+                  />
+                </label>
               </div>
-              <textarea
-                rows="6"
-                placeholder="How can we help you?"
-                className="mb-[20px] w-full rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
-              />
+              <label className="mb-[20px] block text-secondary">
+                <span className="mb-[6px] block text-[0.95rem] font-semibold">
+                  How can we help you?
+                </span>
+                <textarea
+                  rows="6"
+                  name="message"
+                  required
+                  value={formValues.message}
+                  onChange={handleChange}
+                  className="w-full rounded-[4px] border border-[#ddd] bg-white p-[12px] text-secondary placeholder:text-[#666]"
+                />
+              </label>
               <Button variant="accent" type="submit">
-                Submit Inquiry
+                Open Email Draft
               </Button>
+              <p className="mt-[12px] text-[0.95rem] text-secondary">
+                Submitting opens your default email app with your message ready
+                to send.
+              </p>
             </form>
 
             <PageCard title="Business Hours" className="h-fit">

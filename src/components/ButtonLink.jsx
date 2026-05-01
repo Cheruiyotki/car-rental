@@ -22,17 +22,22 @@ export default function ButtonLink({
   to,
   variant = "primary",
   className = "",
+  ...props
 }) {
   if (to) {
     return (
-      <RouteLink to={to} className={buildClassName(variant, className)}>
+      <RouteLink
+        to={to}
+        className={buildClassName(variant, className)}
+        {...props}
+      >
         {children}
       </RouteLink>
     );
   }
 
   return (
-    <a href={href} className={buildClassName(variant, className)}>
+    <a href={href} className={buildClassName(variant, className)} {...props}>
       {children}
     </a>
   );
@@ -43,9 +48,14 @@ export function Button({
   type = "button",
   variant = "primary",
   className = "",
+  ...props
 }) {
   return (
-    <button type={type} className={buildClassName(variant, className)}>
+    <button
+      type={type}
+      className={buildClassName(variant, className)}
+      {...props}
+    >
       {children}
     </button>
   );

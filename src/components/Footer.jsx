@@ -70,9 +70,21 @@ export default function Footer() {
               Car City, CC 12345
             </p>
             <p>
-              Phone: (555) 123-4567
+              Phone:{" "}
+              <a
+                href="tel:+15551234567"
+                className="text-[#ddd] no-underline transition-colors duration-300 hover:text-white"
+              >
+                (555) 123-4567
+              </a>
               <br />
-              Email: info@autoelite.com
+              Email:{" "}
+              <a
+                href="mailto:info@autoelite.com"
+                className="text-[#ddd] no-underline transition-colors duration-300 hover:text-white"
+              >
+                info@autoelite.com
+              </a>
             </p>
           </div>
         </div>

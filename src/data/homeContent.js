@@ -104,10 +104,10 @@ export const quickLinks = [
 
 export const customerServiceLinks = [
   { label: "Contact Us", path: routes.contact },
-  { label: "FAQ", href: "#" },
-  { label: "Warranty", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
+  { label: "FAQ", path: routes.faq },
+  { label: "Warranty", path: routes.warranty },
+  { label: "Privacy Policy", path: routes.privacyPolicy },
+  { label: "Terms of Service", path: routes.termsOfService },
 ];
 
 export const heroBackground =

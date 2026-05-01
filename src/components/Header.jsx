@@ -4,7 +4,14 @@ import { navigationLinks } from "../data/homeContent";
 import RouteLink from "./RouteLink";
 import { routes } from "../utils/routes";
 
-export default function Header() {
+function getNavLinkClass(isActive) {
+  return [
+    "font-medium no-underline transition-colors duration-300",
+    isActive ? "text-primary" : "text-light hover:text-primary",
+  ].join(" ");
+}
+
+export default function Header({ currentPath }) {
   return (
     <header className="sticky top-0 z-[100] m-[3px] rounded-[10px] bg-header shadow-[0_2px_10px_rgba(0,0,0,0.1)]">
       <Container className="flex flex-col items-center justify-between py-[15px] md:flex-row">
@@ -15,7 +22,7 @@ export default function Header() {
           AutoElite
         </RouteLink>
 
-        <nav>
+        <nav aria-label="Primary navigation">
           <ul className="mt-[15px] flex list-none flex-wrap justify-center md:mt-0">
             {navigationLinks.map((link) => (
               <li
@@ -24,7 +31,8 @@ export default function Header() {
               >
                 <RouteLink
                   to={link.path}
-                  className="font-medium text-light no-underline transition-colors duration-300 hover:text-primary"
+                  className={getNavLinkClass(currentPath === link.path)}
+                  aria-current={currentPath === link.path ? "page" : undefined}
                 >
                   {link.label}
                 </RouteLink>
@@ -34,7 +42,7 @@ export default function Header() {
         </nav>
 
         <div>
-          <ButtonLink href="#">Login</ButtonLink>
+          <ButtonLink to={routes.login}>Login</ButtonLink>
         </div>
       </Container>
     </header>
