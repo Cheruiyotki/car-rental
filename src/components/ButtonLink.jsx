@@ -1,3 +1,5 @@
+import RouteLink from "./RouteLink";
+
 const baseClasses =
   "inline-block cursor-pointer rounded-[4px] border-none px-[20px] py-[10px] font-semibold text-white no-underline transition-colors duration-300";
 
@@ -17,9 +19,18 @@ function buildClassName(variant, className) {
 export default function ButtonLink({
   children,
   href = "#",
+  to,
   variant = "primary",
   className = "",
 }) {
+  if (to) {
+    return (
+      <RouteLink to={to} className={buildClassName(variant, className)}>
+        {children}
+      </RouteLink>
+    );
+  }
+
   return (
     <a href={href} className={buildClassName(variant, className)}>
       {children}

@@ -1,5 +1,6 @@
 import Container from "./Container";
 import ButtonLink from "./ButtonLink";
+import { routes } from "../utils/routes";
 
 export default function CtaSection() {
   return (
@@ -12,13 +13,13 @@ export default function CtaSection() {
         </p>
 
         <div className="mt-[30px] flex flex-col items-center gap-[20px] md:flex-row md:flex-wrap md:justify-center">
-          <ButtonLink href="#" variant="inverse">
+          <ButtonLink to={routes.inventory} variant="inverse">
             Browse Inventory
           </ButtonLink>
-          <ButtonLink href="#" variant="accent">
+          <ButtonLink to={routes.financing} variant="accent">
             Get Pre-Approved
           </ButtonLink>
-          <ButtonLink href="#" variant="lightOutline">
+          <ButtonLink to={routes.sellYourCar} variant="lightOutline">
             Sell Your Car
           </ButtonLink>
         </div>

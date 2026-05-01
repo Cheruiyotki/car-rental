@@ -1,5 +1,6 @@
 import Container from "./Container";
 import { customerServiceLinks, quickLinks } from "../data/homeContent";
+import RouteLink from "./RouteLink";
 
 export default function Footer() {
   return (
@@ -15,13 +16,22 @@ export default function Footer() {
             <h3 className="mb-[20px] text-[1.2rem]">Quick Links</h3>
             <ul className="list-none">
               {quickLinks.map((link) => (
-                <li key={link} className="mb-[10px]">
-                  <a
-                    href="#"
-                    className="no-underline text-[#ddd] transition-colors duration-300 hover:text-white"
-                  >
-                    {link}
-                  </a>
+                <li key={link.label} className="mb-[10px]">
+                  {link.path ? (
+                    <RouteLink
+                      to={link.path}
+                      className="no-underline text-[#ddd] transition-colors duration-300 hover:text-white"
+                    >
+                      {link.label}
+                    </RouteLink>
+                  ) : (
+                    <a
+                      href={link.href || "#"}
+                      className="no-underline text-[#ddd] transition-colors duration-300 hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -31,13 +41,22 @@ export default function Footer() {
             <h3 className="mb-[20px] text-[1.2rem]">Customer Service</h3>
             <ul className="list-none">
               {customerServiceLinks.map((link) => (
-                <li key={link} className="mb-[10px]">
-                  <a
-                    href="#"
-                    className="no-underline text-[#ddd] transition-colors duration-300 hover:text-white"
-                  >
-                    {link}
-                  </a>
+                <li key={link.label} className="mb-[10px]">
+                  {link.path ? (
+                    <RouteLink
+                      to={link.path}
+                      className="no-underline text-[#ddd] transition-colors duration-300 hover:text-white"
+                    >
+                      {link.label}
+                    </RouteLink>
+                  ) : (
+                    <a
+                      href={link.href || "#"}
+                      className="no-underline text-[#ddd] transition-colors duration-300 hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

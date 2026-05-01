@@ -3,6 +3,7 @@ import SectionTitle from "./SectionTitle";
 import VehicleCard from "./VehicleCard";
 import ButtonLink from "./ButtonLink";
 import { featuredVehicles } from "../data/homeContent";
+import { routes } from "../utils/routes";
 
 export default function FeaturedVehicles() {
   return (
@@ -20,7 +21,7 @@ export default function FeaturedVehicles() {
         </div>
 
         <div className="mb-[50px] text-center">
-          <ButtonLink href="#" variant="accent">
+          <ButtonLink to={routes.inventory} variant="accent">
             View All Inventory
           </ButtonLink>
         </div>

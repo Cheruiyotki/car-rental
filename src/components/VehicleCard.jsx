@@ -1,4 +1,5 @@
 import ButtonLink from "./ButtonLink";
+import { routes } from "../utils/routes";
 
 export default function VehicleCard({ vehicle }) {
   return (
@@ -18,7 +19,7 @@ export default function VehicleCard({ vehicle }) {
             <span key={spec}>{spec}</span>
           ))}
         </div>
-        <ButtonLink href="#">View Details</ButtonLink>
+        <ButtonLink to={routes.inventory}>View Details</ButtonLink>
       </div>
     </article>
   );

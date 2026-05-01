@@ -1,10 +1,12 @@
+import { routes } from "../utils/routes";
+
 export const navigationLinks = [
-  "Home",
-  "Inventory",
-  "Sell Your Car",
-  "Financing",
-  "About Us",
-  "Contact",
+  { label: "Home", path: routes.home },
+  { label: "Inventory", path: routes.inventory },
+  { label: "Sell Your Car", path: routes.sellYourCar },
+  { label: "Financing", path: routes.financing },
+  { label: "About Us", path: routes.aboutUs },
+  { label: "Contact", path: routes.contact },
 ];
 
 export const searchFilters = [
@@ -93,19 +95,19 @@ export const testimonials = [
 ];
 
 export const quickLinks = [
-  "New Vehicles",
-  "Used Vehicles",
-  "Sell Your Car",
-  "Financing",
-  "Testimonials",
+  { label: "New Vehicles", path: routes.inventory },
+  { label: "Used Vehicles", path: routes.inventory },
+  { label: "Sell Your Car", path: routes.sellYourCar },
+  { label: "Financing", path: routes.financing },
+  { label: "Testimonials", path: routes.home },
 ];
 
 export const customerServiceLinks = [
-  "Contact Us",
-  "FAQ",
-  "Warranty",
-  "Privacy Policy",
-  "Terms of Service",
+  { label: "Contact Us", path: routes.contact },
+  { label: "FAQ", href: "#" },
+  { label: "Warranty", href: "#" },
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
 ];
 
 export const heroBackground =
