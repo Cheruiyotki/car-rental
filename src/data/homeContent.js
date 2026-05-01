@@ -1,5 +1,5 @@
 import { routes } from "../utils/routes";
-import heroBackgroundImage from "../assets/luxury-car-hero.jpg";
+import heroBackgroundImage from "../assets/hero.avif";
 
 export const navigationLinks = [
   { label: "Home", path: routes.home },
