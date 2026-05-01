@@ -4,16 +4,24 @@ import { valueProps } from "../data/homeContent";
 
 export default function ValueProps() {
   return (
-    <section className="bg-light py-[60px]">
+    <section className="bg-light py-[60px]" data-gsap-section>
       <Container>
         <SectionTitle
+          data-gsap-section-item
           title="Why Choose AutoElite?"
           subtitle="We make car buying simple and stress-free"
         />
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px]">
+        <div
+          className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px]"
+          data-gsap-card-group
+        >
           {valueProps.map((item) => (
-            <div key={item.title} className="p-[20px] text-center">
+            <div
+              key={item.title}
+              className="p-[20px] text-center"
+              data-gsap-card
+            >
               <div className="mb-[15px] text-[2.5rem] text-primary">
                 {item.icon}
               </div>

@@ -11,6 +11,7 @@ export default function PageCard({
 }) {
   return (
     <div
+      data-gsap-card
       className={[
         "rounded-[8px] p-[25px]",
         toneClasses[tone] || toneClasses.white,

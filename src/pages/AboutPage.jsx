@@ -41,10 +41,13 @@ export default function AboutPage() {
         </ButtonLink>
       </PageHero>
 
-      <section className="py-[60px]">
+      <section className="py-[60px]" data-gsap-section>
         <Container>
           <div className="grid gap-[30px] md:grid-cols-[1.2fr_0.8fr]">
-            <div className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]">
+            <div
+              className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]"
+              data-gsap-section-item
+            >
               <h2 className="mb-[15px] text-[2rem] text-secondary">
                 Built Around Trust
               </h2>
@@ -61,7 +64,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid gap-[20px]">
+            <div className="grid gap-[20px]" data-gsap-card-group>
               {stats.map((stat) => (
                 <PageCard key={stat.title} title={stat.title}>
                   <p>{stat.text}</p>
@@ -71,11 +74,15 @@ export default function AboutPage() {
           </div>
 
           <SectionTitle
+            data-gsap-section-item
             title="Our Core Values"
             subtitle="The standards that guide every interaction"
           />
 
-          <div className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]">
+          <div
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {values.map((value) => (
               <PageCard key={value.title} title={value.title}>
                 <p>{value.text}</p>

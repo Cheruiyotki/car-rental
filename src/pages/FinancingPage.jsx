@@ -50,14 +50,18 @@ export default function FinancingPage() {
         </ButtonLink>
       </PageHero>
 
-      <section className="py-[60px]">
+      <section className="py-[60px]" data-gsap-section>
         <Container>
           <SectionTitle
+            data-gsap-section-item
             title="Why Finance With AutoElite"
             subtitle="Support designed around speed, flexibility, and peace of mind"
           />
 
-          <div className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]">
+          <div
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {financingBenefits.map((item) => (
               <PageCard key={item.title} title={item.title}>
                 <p>{item.text}</p>
@@ -66,11 +70,15 @@ export default function FinancingPage() {
           </div>
 
           <SectionTitle
+            data-gsap-section-item
             title="How It Works"
             subtitle="A straightforward path from application to approval"
           />
 
-          <div className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]">
+          <div
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {steps.map((step) => (
               <PageCard key={step.title} title={step.title}>
                 <p>{step.text}</p>

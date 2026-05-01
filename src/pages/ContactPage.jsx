@@ -27,14 +27,18 @@ export default function ContactPage() {
         description="Questions about a vehicle, financing, or selling your car? Reach out and our team will help you get started."
       />
 
-      <section className="py-[60px]">
+      <section className="py-[60px]" data-gsap-section>
         <Container>
           <SectionTitle
+            data-gsap-section-item
             title="Get In Touch"
             subtitle="Choose the contact method that works best for you"
           />
 
-          <div className="mb-[40px] grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[25px]">
+          <div
+            className="mb-[40px] grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {contactDetails.map((item) => (
               <PageCard key={item.title} title={item.title}>
                 <p>{item.text}</p>
@@ -46,6 +50,7 @@ export default function ContactPage() {
             <form
               className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]"
               onSubmit={(event) => event.preventDefault()}
+              data-gsap-section-item
             >
               <h3 className="mb-[20px] text-[1.5rem]">
                 Send Us a Message

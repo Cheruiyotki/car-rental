@@ -37,14 +37,18 @@ export default function InventoryPage() {
         </ButtonLink>
       </PageHero>
 
-      <section className="py-[60px]">
+      <section className="py-[60px]" data-gsap-section>
         <Container>
           <SectionTitle
+            data-gsap-section-item
             title="Shop By Category"
             subtitle="Find the right vehicle for your lifestyle and budget"
           />
 
-          <div className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]">
+          <div
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {inventoryCategories.map((category) => (
               <PageCard key={category.title} title={category.title}>
                 <p>{category.text}</p>
@@ -53,11 +57,15 @@ export default function InventoryPage() {
           </div>
 
           <SectionTitle
+            data-gsap-section-item
             title="Featured Inventory"
             subtitle="A few standout vehicles currently drawing attention"
           />
 
-          <div className="mb-[50px] grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[25px]">
+          <div
+            className="mb-[50px] grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {featuredVehicles.map((vehicle) => (
               <VehicleCard key={vehicle.name} vehicle={vehicle} />
             ))}

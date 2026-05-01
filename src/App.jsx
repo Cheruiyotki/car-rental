@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Layout from "./components/Layout";
+import usePageAnimations from "./hooks/usePageAnimations";
 import {
   getCurrentHashPath,
   routeTitles,
@@ -24,6 +25,7 @@ const routeComponents = {
 
 export default function App() {
   const [path, setPath] = useState(getCurrentHashPath);
+  const pageRef = usePageAnimations(path);
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -40,11 +42,17 @@ export default function App() {
     document.title = routeTitles[path] || "AutoElite";
   }, [path]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [path]);
+
   const ActivePage = routeComponents[path] || NotFoundPage;
 
   return (
     <Layout>
-      <ActivePage />
+      <div ref={pageRef}>
+        <ActivePage />
+      </div>
     </Layout>
   );
 }

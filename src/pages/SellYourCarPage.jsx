@@ -50,14 +50,18 @@ export default function SellYourCarPage() {
         </ButtonLink>
       </PageHero>
 
-      <section className="bg-light py-[60px]">
+      <section className="bg-light py-[60px]" data-gsap-section>
         <Container>
           <SectionTitle
+            data-gsap-section-item
             title="How Selling Works"
             subtitle="A simple process designed to keep things moving"
           />
 
-          <div className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]">
+          <div
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {sellingSteps.map((step) => (
               <PageCard key={step.title} title={step.title}>
                 <p>{step.text}</p>
@@ -66,11 +70,15 @@ export default function SellYourCarPage() {
           </div>
 
           <SectionTitle
+            data-gsap-section-item
             title="Why Sellers Choose AutoElite"
             subtitle="Support that makes trading in or selling easier"
           />
 
-          <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]">
+          <div
+            className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            data-gsap-card-group
+          >
             {sellerBenefits.map((benefit) => (
               <PageCard key={benefit.title} title={benefit.title}>
                 <p>{benefit.text}</p>

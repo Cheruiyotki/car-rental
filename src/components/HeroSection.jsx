@@ -6,20 +6,30 @@ export default function HeroSection() {
   return (
     <section
       className="bg-cover bg-center py-[60px] text-center text-white md:py-[100px]"
+      data-gsap-hero
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${heroBackground}')`,
       }}
     >
       <Container>
-        <h1 className="mb-[20px] text-[2rem] md:text-[2.5rem]">
+        <h1
+          className="mb-[20px] text-[2rem] md:text-[2.5rem]"
+          data-gsap-hero-item
+        >
           Find Your Dream Car Today
         </h1>
-        <p className="mx-auto mb-[30px] max-w-[700px] text-[1.2rem]">
+        <p
+          className="mx-auto mb-[30px] max-w-[700px] text-[1.2rem]"
+          data-gsap-hero-item
+        >
           Browse thousands of quality vehicles with transparent pricing and
           hassle-free financing
         </p>
 
-        <div className="mx-auto flex max-w-[800px] flex-col gap-[15px] rounded-[8px] bg-white p-[20px] md:flex-row md:flex-wrap">
+        <div
+          className="mx-auto flex max-w-[800px] flex-col gap-[15px] rounded-[8px] bg-white p-[20px] md:flex-row md:flex-wrap"
+          data-gsap-hero-item
+        >
           {searchFilters.map((filter) => (
             <select
               key={filter.key}
