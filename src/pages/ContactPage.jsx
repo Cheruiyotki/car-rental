@@ -72,7 +72,7 @@ export default function ContactPage() {
           />
 
           <div
-            className="mb-[40px] grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-[25px]"
+            className="mb-[40px] grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-[25px]"
             data-gsap-card-group
           >
             {contactDetails.map((item) => (
@@ -84,11 +84,11 @@ export default function ContactPage() {
 
           <div className="grid gap-[30px] md:grid-cols-[1.1fr_0.9fr]">
             <form
-              className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]"
+              className="rounded-[8px] bg-light p-[20px] shadow-[0_4px_8px_rgba(0,0,0,0.05)] sm:p-[30px]"
               onSubmit={handleSubmit}
               data-gsap-section-item
             >
-              <h3 className="mb-[20px] text-[1.5rem]">
+              <h3 className="mb-[20px] text-[1.35rem] leading-tight sm:text-[1.5rem]">
                 Send Us a Message
               </h3>
               <div className="mb-[15px] grid gap-[15px] md:grid-cols-2">

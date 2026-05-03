@@ -59,7 +59,7 @@ export default function FinancingPage() {
           />
 
           <div
-            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] gap-[25px]"
             data-gsap-card-group
           >
             {financingBenefits.map((item) => (
@@ -76,7 +76,7 @@ export default function FinancingPage() {
           />
 
           <div
-            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] gap-[25px]"
             data-gsap-card-group
           >
             {steps.map((step) => (

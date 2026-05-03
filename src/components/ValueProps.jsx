@@ -13,7 +13,7 @@ export default function ValueProps() {
         />
 
         <div
-          className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[30px]"
+          className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] gap-[24px] md:gap-[30px]"
           data-gsap-card-group
         >
           {valueProps.map((item) => (

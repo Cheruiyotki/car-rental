@@ -13,12 +13,12 @@ export default function VehicleCard({ vehicle }) {
         className="h-[200px] w-full bg-[#ddd] object-cover"
       />
 
-      <div className="p-[20px]">
+      <div className="p-[18px] sm:p-[20px]">
         <h3 className="mb-[10px] text-[1.2rem]">{vehicle.name}</h3>
         <div className="mb-[10px] text-[1.3rem] font-bold text-primary">
           {vehicle.price}
         </div>
-        <div className="mb-[15px] flex justify-between text-[0.9rem] text-[#666]">
+        <div className="mb-[15px] flex flex-wrap justify-between gap-x-[12px] gap-y-[4px] text-[0.9rem] text-[#666]">
           {vehicle.specs.map((spec) => (
             <span key={spec}>{spec}</span>
           ))}

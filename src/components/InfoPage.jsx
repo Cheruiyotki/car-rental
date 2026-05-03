@@ -22,7 +22,7 @@ export default function InfoPage({
           />
 
           <div
-            className="mb-[40px] grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-[25px]"
+            className="mb-[40px] grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-[25px]"
             data-gsap-card-group
           >
             {sections.map((section) => (

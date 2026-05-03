@@ -45,10 +45,10 @@ export default function AboutPage() {
         <Container>
           <div className="grid gap-[30px] md:grid-cols-[1.2fr_0.8fr]">
             <div
-              className="rounded-[8px] bg-light p-[30px] shadow-[0_4px_8px_rgba(0,0,0,0.05)]"
+              className="rounded-[8px] bg-light p-[20px] shadow-[0_4px_8px_rgba(0,0,0,0.05)] sm:p-[30px]"
               data-gsap-section-item
             >
-              <h2 className="mb-[15px] text-[2rem] text-secondary">
+              <h2 className="mb-[15px] text-[1.6rem] leading-tight text-secondary md:text-[2rem]">
                 Built Around Trust
               </h2>
               <p className="mb-[16px]">
@@ -80,7 +80,7 @@ export default function AboutPage() {
           />
 
           <div
-            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[25px]"
+            className="mb-[50px] grid grid-cols-[repeat(auto-fit,minmax(min(100%,250px),1fr))] gap-[25px]"
             data-gsap-card-group
           >
             {values.map((value) => (

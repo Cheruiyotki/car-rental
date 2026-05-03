@@ -1,7 +1,7 @@
 import RouteLink from "./RouteLink";
 
 const baseClasses =
-  "inline-block cursor-pointer rounded-[4px] border-none px-[20px] py-[10px] font-semibold text-white no-underline transition-colors duration-300";
+  "inline-block cursor-pointer rounded-[4px] border-none px-[20px] py-[10px] text-center font-semibold leading-[1.2] text-white no-underline transition-colors duration-300";
 
 const variantClasses = {
   primary: "bg-primary hover:bg-[#0055aa]",

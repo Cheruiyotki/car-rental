@@ -6,12 +6,14 @@ export default function SectionTitle({
 }) {
   return (
     <div
-      className={["mb-[30px] mt-[50px] text-center", className]
+      className={["mb-[26px] mt-[42px] text-center sm:mb-[30px] sm:mt-[50px]", className]
         .filter(Boolean)
         .join(" ")}
       {...props}
     >
-      <h2 className="mb-[10px] text-[2rem] text-secondary">{title}</h2>
+      <h2 className="mb-[10px] text-[1.6rem] leading-tight text-secondary md:text-[2rem]">
+        {title}
+      </h2>
       <p>{subtitle}</p>
     </div>
   );
