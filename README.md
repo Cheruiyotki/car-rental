@@ -1,16 +1,19 @@
 # AutoElite
 
-AutoElite is a car dealership website rebuilt from a static HTML/CSS landing page into a React + Vite + Tailwind CSS project.
+AutoElite is a car dealership frontend rebuilt from a static HTML/CSS landing page into a React + Vite + Tailwind CSS project.
 
-The current version keeps the original visual style, color codes, and general behavior while reorganizing the UI into reusable React components and multiple pages.
+The current version keeps the original visual style, color palette, and overall flow while reorganizing the UI into reusable React components, multiple pages, and a deploy-ready frontend structure.
 
 ## Features
 
-- Multi-page React experience for `Home`, `Inventory`, `Sell Your Car`, `Financing`, `About Us`, and `Contact`
+- Multi-page React experience for the main dealership pages plus support pages
 - Tailwind CSS styling that preserves the original look and color palette
+- Shared AVIF hero background across page hero sections
+- Translucent fixed navbar layered over the hero image
 - GSAP-powered page-load and scroll animations
 - Hash-based navigation that works well on static hosting
-- Reusable page sections and shared layout components
+- Contact form that opens a prefilled email draft in the user's default mail app
+- Reusable page sections, shared layout components, and deploy-friendly build output
 
 ## Tech Stack
 
@@ -45,6 +48,22 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+Build the project with:
+
+```bash
+npm run build
+```
+
+The production-ready files are generated in `dist/`.
+
+This project uses:
+
+- hash-based routing for static hosting compatibility
+- a relative Vite base path for easier deployment to static hosts
+- an optimized `hero.avif` asset for page hero backgrounds
+
 ## Available Pages
 
 - `#/` - Home
@@ -53,11 +72,17 @@ npm run preview
 - `#/financing` - Financing
 - `#/about-us` - About Us
 - `#/contact` - Contact
+- `#/faq` - FAQ
+- `#/warranty` - Warranty
+- `#/privacy-policy` - Privacy Policy
+- `#/terms-of-service` - Terms of Service
+- `#/login` - Login
 
 ## Project Structure
 
 ```text
 src/
+  assets/
   components/
   data/
   hooks/
@@ -74,5 +99,8 @@ The project uses hash-based routing, so page navigation works without additional
 ## Notes
 
 - `node_modules/` and `dist/` are ignored through `.gitignore`
-- The navbar styling and the original design language were preserved during the React conversion
+- The navbar styling and original design language were preserved during the React conversion
+- The fixed navbar overlays the hero image across the site
+- The shared hero image is loaded from `src/assets/hero.avif`
 - Page animations respect reduced-motion preferences
+- The frontend has been prepared for static deployment with `vite build`
