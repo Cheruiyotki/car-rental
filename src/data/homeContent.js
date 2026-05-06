@@ -13,47 +13,65 @@ export const navigationLinks = [
 export const searchFilters = [
   {
     key: "make",
-    options: ["Make", "Toyota", "Honda", "Ford", "BMW"],
+    options: ["Make", "Toyota", "Honda", "Ford", "BMW", "Nissan", "Mercedes-Benz", "Volkswagen", "Audi", "Hyundai"],
   },
   {
     key: "model",
-    options: ["Model"],
+    options: ["Model", "Camry", "CR-V", "F-150", "X5", "Altima", "C-Class", "Golf", "A4", "Tucson"],
   },
   {
     key: "priceRange",
     options: [
       "Price Range",
-      "Under $10,000",
-      "$10,000 - $20,000",
-      "$20,000 - $30,000",
-      "Over $30,000",
+      "Under 1,300,000 KSH",
+      "1,300,000 - 2,600,000 KSH",
+      "2,600,000 - 3,900,000 KSH",
+      "Over 3,900,000 KSH",
     ],
   },
   {
     key: "year",
-    options: ["Year", "2023", "2022", "2021", "2020"],
+    options: ["Year", "2024", "2023", "2022", "2021", "2020", "2019"],
   },
 ];
 
 export const featuredVehicles = [
   {
     name: "2022 Toyota Camry SE",
-    price: "$24,999",
+    price: "3,249,870 KSH",
     specs: ["25,000 mi", "Automatic", "Hybrid"],
     image:
       "https://placehold.co/300x200/3366CC/FFFFFF/png?text=Toyota+Camry",
   },
   {
     name: "2021 Honda CR-V EX",
-    price: "$27,500",
+    price: "3,575,000 KSH",
     specs: ["18,500 mi", "Automatic", "Gas"],
     image: "https://placehold.co/300x200/CC3333/FFFFFF/png?text=Honda+CR-V",
   },
   {
     name: "2020 BMW X5 xDrive40i",
-    price: "$49,995",
+    price: "6,499,350 KSH",
     specs: ["22,000 mi", "Automatic", "Gas"],
     image: "https://placehold.co/300x200/333333/FFFFFF/png?text=BMW+X5",
+  },
+  {
+    name: "2023 Nissan Altima SV",
+    price: "2,860,000 KSH",
+    specs: ["15,000 mi", "CVT", "Gas"],
+    image: "https://placehold.co/300x200/FF6600/FFFFFF/png?text=Nissan+Altima",
+  },
+  {
+    name: "2021 Mercedes-Benz C-Class C300",
+    price: "5,200,000 KSH",
+    specs: ["20,000 mi", "Automatic", "Gas"],
+    image: "https://placehold.co/300x200/000000/FFFFFF/png?text=Mercedes+C-Class",
+  },
+  {
+    name: "2022 Volkswagen Golf GTI",
+    price: "3,900,000 KSH",
+    specs: ["12,000 mi", "Manual", "Gas"],
+    image: "https://placehold.co/300x200/003366/FFFFFF/png?text=Volkswagen+Golf",
   },
 ];
 
